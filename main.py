@@ -43,5 +43,5 @@ async def on_message(message):
         title = "nick-" + str(new_time)
         await channel.create_thread(name=title, content=str(msg))
 
-keep_alive()
+# keep_alive()
 bot.run(os.getenv('TOKEN'))

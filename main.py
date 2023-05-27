@@ -4,7 +4,7 @@ from  dotenv import load_dotenv
 import os
 from discord.ext import commands
 import time
-from keep_run import keep_alive
+import schedule
 
 # .env
 load_dotenv()
@@ -43,5 +43,5 @@ async def on_message(message):
         title = "nick-" + str(new_time)
         await channel.create_thread(name=title, content=str(msg))
 
-# keep_alive()
+
 bot.run(os.getenv('TOKEN'))

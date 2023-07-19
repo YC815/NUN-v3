@@ -6,5 +6,5 @@
 TOKEN= <機器人token>
 GAME= <機器人狀態(正在玩 GAME)>
 CHANNEL_ID= <貼文頻道的ID>
-TITLE_PREFIX= <貼文的前綴(TITLE_PREFIX-發布日期)>
+TITLE_PREFIX= <貼文的前綴(TITLE_PREFIX發布日期)>
 ```

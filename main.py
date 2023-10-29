@@ -37,11 +37,13 @@ async def on_message(message):
     if message.channel.type == discord.ChannelType.private:
         channel = bot.get_channel(int(os.getenv('CHANNEL_ID')))
         msg = message.content
+        attachment = message.attachments[0]
+        url = attachment.url
         tl = time.localtime(time.time())
         new_time = "%4s.%2s.%2s %2s'%2s" % (
             str(tl.tm_year), str(tl.tm_mon), str(tl.tm_mday), str(tl.tm_hour), str(tl.tm_min))
         title = str(os.getenv('TITLE_PREFIX')) + str(new_time)
-        await channel.create_thread(name=title, content=str(msg))
+        await channel.create_thread(name=title, content=msg + " " + url)
 
 
 bot.run(os.getenv('TOKEN'))
